@@ -1,13 +1,12 @@
 import React from "react";
 import RegForm from "./regForm";
-import mainLogo from "../assets/Mastercard_2019_logo.png";
-import {
-  FormControl,
-  // InputLabel,
-  // Input,
-  TextField,
-  // FormHelperText,
-} from "@mui/material";
+// import mainLogo from "../assets/Mastercard_2019_logo.png";
+import //   FormControl,
+// InputLabel,
+// Input,
+//   TextField,
+// FormHelperText,
+"@mui/material";
 
 const Landing = ({ Desktop, Ipad, Mobile }) => {
   return (
