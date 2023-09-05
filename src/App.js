@@ -5,7 +5,7 @@ function App() {
   return (
     <div
       style={{
-        background: "black",
+        // background: "black",
         height: "110vh",
         width: "100vw",
         display: "flex",
