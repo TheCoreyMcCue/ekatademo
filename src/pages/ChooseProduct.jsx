@@ -40,7 +40,7 @@ const ChooseProduct = () => (
               variant="outlined"
               color="warning"
             >
-              Transaction Risk
+              Transaction Risk API
             </Button>
           </Link>
         </div>
