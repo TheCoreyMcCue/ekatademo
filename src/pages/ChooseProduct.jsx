@@ -7,6 +7,12 @@ import shareVideo from "../assets/choose.mp4";
 const ChooseProduct = () => (
   <div className="flex justify-start items-center flex-col h-screen">
     <div className=" relative w-full h-full">
+      {/* <h1
+        className="p-5 text-xl text-center"
+        style={{ color: "white", backgroundColor: "black" }}
+      >
+        Ekata Product Demo
+      </h1> */}
       <video
         src={shareVideo}
         type="video/mp4"
@@ -18,7 +24,7 @@ const ChooseProduct = () => (
       />
 
       <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0    bg-blackOverlay">
-        <h2 className="p-5 text-xl" style={{ color: "#F89F15" }}>
+        <h2 className="p-5 text-l" style={{ color: "#F89F15" }}>
           Select a Product
         </h2>
         <div className="p-1">
@@ -40,7 +46,7 @@ const ChooseProduct = () => (
               variant="outlined"
               color="warning"
             >
-              Transaction Risk API
+              Transaction Risk
             </Button>
           </Link>
         </div>
