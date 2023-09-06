@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import mainLogo from "../assets/Mastercard_2019_logo.png";
 import shareVideo from "../assets/choose.mp4";
 
@@ -24,20 +25,24 @@ const ChooseProduct = () => (
           <img src={mainLogo} alt="" width="130px" />
         </div>
         <div className="p-5 text-xl">
-          <Button
-            style={{ marginRight: "0.5rem" }}
-            variant="outlined"
-            color="warning"
-          >
-            Account Opening
-          </Button>
-          <Button
-            style={{ marginLeft: "0.5rem" }}
-            variant="outlined"
-            color="warning"
-          >
-            Transaction Risk
-          </Button>
+          <Link to="/login">
+            <Button
+              style={{ marginRight: "0.5rem" }}
+              variant="outlined"
+              color="warning"
+            >
+              Account Opening
+            </Button>
+          </Link>
+          <Link to="/cart">
+            <Button
+              style={{ marginLeft: "0.5rem" }}
+              variant="outlined"
+              color="warning"
+            >
+              Transaction Risk
+            </Button>
+          </Link>
         </div>
 
         <div className="shadow-2xl"></div>
