@@ -12,9 +12,9 @@ import { Route, Routes } from "react-router-dom";
 import {
   ChooseProduct,
   LoginPage,
-  // SignupPage,
+  SignupPage,
   ShoppingCart,
-  // ApiRequestPage,
+  ApiRequestPage,
   // ApiResponsePage,
   // SignalBreakdownPage,
   PageNotFound,
@@ -52,9 +52,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<ChooseProduct />} />
         <Route path="/login" element={<LoginPage />} />
-        {/* <Route path="/signup" element={<SignupPage />} /> */}
+        <Route path="/signup" element={<SignupPage />} />
         <Route path="/cart" element={<ShoppingCart />} />
-        {/* <Route path="/request" element={<ApiRequestPage />} /> */}
+        <Route path="/request" element={<ApiRequestPage />} />
         {/* <Route path="/response" element={<ApiResponsePage />} /> */}
         {/* <Route path="/signals" element={<SignalBreakdownPage />} /> */}
         <Route path="*" element={<PageNotFound />} />
