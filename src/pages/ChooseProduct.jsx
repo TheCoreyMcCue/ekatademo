@@ -24,12 +24,12 @@ const ChooseProduct = () => (
       />
 
       <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0    bg-blackOverlay">
-        <h2 className="p-5 text-l" style={{ color: "#F89F15" }}>
-          Select a Product
-        </h2>
         <div className="p-1">
           <img src={mainLogo} alt="" width="130px" />
         </div>
+        <h2 className="pt-5 text-l" style={{ color: "#F89F15" }}>
+          Select a Product
+        </h2>
         <div className="p-5 text-xl">
           <Link to="/login">
             <Button
