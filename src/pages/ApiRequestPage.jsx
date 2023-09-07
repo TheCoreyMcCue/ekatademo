@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
-import mainLogo from "../assets/Mastercard_2019_logo.png";
+// import { Button } from "@mui/material";
+// import { Link } from "react-router-dom";
+// import mainLogo from "../assets/Mastercard_2019_logo.png";
 import shareVideo from "../assets/req.mp4";
 
 const ChooseProduct = () => (
