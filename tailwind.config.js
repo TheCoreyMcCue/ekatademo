@@ -2,6 +2,12 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    primary: {
+      main: "#060606",
+      light: "#42a5f5",
+      dark: "#1565c0",
+      contrastText: "#fff",
+    },
     extend: {
       margin: {
         320: "320px",
