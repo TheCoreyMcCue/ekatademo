@@ -16,7 +16,7 @@ import {
   ShoppingCart,
   ApiRequestPage,
   // ApiResponsePage,
-  // SignalBreakdownPage,
+  SignalBreakdownPage,
   PageNotFound,
 } from "./pages";
 
@@ -56,7 +56,7 @@ const App = () => {
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/request" element={<ApiRequestPage />} />
         {/* <Route path="/response" element={<ApiResponsePage />} /> */}
-        {/* <Route path="/signals" element={<SignalBreakdownPage />} /> */}
+        <Route path="/signals" element={<SignalBreakdownPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

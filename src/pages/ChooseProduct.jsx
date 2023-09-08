@@ -40,7 +40,7 @@ const ChooseProduct = () => (
               Account Opening
             </Button>
           </Link>
-          <Link to="/cart">
+          <Link to="">
             <Button
               style={{ marginLeft: "0.5rem" }}
               variant="outlined"
