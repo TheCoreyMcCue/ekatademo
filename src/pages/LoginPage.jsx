@@ -57,7 +57,6 @@ const LoginPage = () => {
                 <TextField
                   required
                   className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                  id="filled-required"
                   label="Email"
                   type="email"
                   placeholder="Email"
@@ -70,7 +69,6 @@ const LoginPage = () => {
                 <TextField
                   required
                   className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                  id="filled-required"
                   label="Password"
                   type="password"
                   placeholder="Password"

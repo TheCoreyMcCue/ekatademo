@@ -13,7 +13,7 @@ const ChooseProduct = () => {
         setIsButton(true);
       }, "4000");
     };
-  }, [isButton]);
+  }, [isButton, setIsButton]);
 
   console.log(isButton);
 

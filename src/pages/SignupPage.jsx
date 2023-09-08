@@ -24,7 +24,6 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                id="filled-required"
                 label="First Name"
                 type="text"
                 placeholder="First Name"
@@ -37,7 +36,6 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                id="filled-required"
                 label="Last Name"
                 type="text"
                 placeholder="Last Name"
@@ -50,7 +48,6 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                id="filled-required"
                 label="Email"
                 type="text"
                 placeholder="Email"
@@ -63,7 +60,6 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                id="filled-required"
                 label="Phone"
                 type="text"
                 placeholder="Phone"
@@ -76,7 +72,6 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                id="filled-required"
                 label="Address Line 1"
                 type="text"
                 placeholder="Address Line 1"
@@ -89,7 +84,6 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                id="filled-required"
                 label="Address Line 2"
                 type="text"
                 placeholder="Address Line 2"
