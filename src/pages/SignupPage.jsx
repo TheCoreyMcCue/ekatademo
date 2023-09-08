@@ -8,7 +8,7 @@ import CountrySelect from "../components/CountryList";
 const SignupPage = () => {
   return (
     <section>
-      <div className="w-screen h-screen bg-[#F5F5F5] flex flex-col p-20 justify-between items-center">
+      <div className="w-screen h-100 bg-[#F5F5F5] flex flex-col p-20 justify-between items-center">
         <h1 className="text-xl font-semibold text-[#060606]">
           Challenger Bank
         </h1>
