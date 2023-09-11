@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -6,6 +6,23 @@ import { FcGoogle } from "react-icons/fc";
 import CountrySelect from "../components/CountryList";
 
 const SignupPage = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address1, setAddress1] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [country, setCountry] = useState("");
+
+  const assignItems = () => {
+    localStorage.setItem("name", JSON.stringify(`${firstName} ${lastName}`));
+    localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("phone", JSON.stringify(phone));
+    localStorage.setItem("address1", JSON.stringify(address1));
+    localStorage.setItem("address2", JSON.stringify(address2));
+    localStorage.setItem("country", JSON.stringify(country));
+  };
+
   return (
     <section>
       <div className="w-screen h-100 bg-[#F5F5F5] flex flex-col p-20 justify-between items-center">
@@ -27,7 +44,7 @@ const SignupPage = () => {
                 label="First Name"
                 type="text"
                 placeholder="First Name"
-                defaultValue=""
+                onChange={(e) => setFirstName(e.target.value)}
                 color="warning"
                 variant="standard"
               />
@@ -39,7 +56,7 @@ const SignupPage = () => {
                 label="Last Name"
                 type="text"
                 placeholder="Last Name"
-                defaultValue=""
+                onChange={(e) => setLastName(e.target.value)}
                 color="warning"
                 variant="standard"
               />
@@ -51,7 +68,7 @@ const SignupPage = () => {
                 label="Email"
                 type="text"
                 placeholder="Email"
-                defaultValue=""
+                onChange={(e) => setEmail(e.target.value)}
                 color="warning"
                 variant="standard"
               />
@@ -63,7 +80,7 @@ const SignupPage = () => {
                 label="Phone"
                 type="text"
                 placeholder="Phone"
-                defaultValue=""
+                onChange={(e) => setPhone(e.target.value)}
                 color="warning"
                 variant="standard"
               />
@@ -75,7 +92,7 @@ const SignupPage = () => {
                 label="Address Line 1"
                 type="text"
                 placeholder="Address Line 1"
-                defaultValue=""
+                onChange={(e) => setAddress1(e.target.value)}
                 color="warning"
                 variant="standard"
               />
@@ -87,32 +104,22 @@ const SignupPage = () => {
                 label="Address Line 2"
                 type="text"
                 placeholder="Address Line 2"
-                defaultValue=""
+                onChange={(e) => setAddress2(e.target.value)}
                 color="warning"
                 variant="standard"
               />
             </div>
 
             <div style={{ marginTop: "20px" }}>
-              <CountrySelect />
+              <CountrySelect setCountry={setCountry} />
             </div>
-
-            {/* <div className="w-full flex items-center justify-between mt-2">
-              <div className="w-1/2 flex">
-                <FormControlLabel
-                  control={<Checkbox defaultChecked />}
-                  label="Remember Me"
-                />
-              </div>
-              <div>
-                <Link className="text-small hover:underline" to="/signup">
-                  Forgot Password?
-                </Link>
-              </div>
-            </div> */}
             <div className="w-full flex flex-col my-4">
               <Link to="/request">
-                <Button className="w-full my-2" variant="contained">
+                <Button
+                  className="w-full my-2"
+                  variant="contained"
+                  onClick={() => assignItems()}
+                >
                   Register
                 </Button>
               </Link>

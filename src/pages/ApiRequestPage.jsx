@@ -15,7 +15,12 @@ const ChooseProduct = () => {
     };
   }, [isButton, setIsButton]);
 
-  console.log(isButton);
+  console.log(
+    localStorage.getItem("name"),
+    localStorage.getItem("email"),
+    localStorage.getItem("phone"),
+    localStorage.getItem("country")
+  );
 
   return (
     <div className="flex justify-start items-center flex-col h-screen">

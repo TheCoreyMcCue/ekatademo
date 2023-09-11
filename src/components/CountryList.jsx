@@ -5,7 +5,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 
 import { countries } from "../hardData";
 
-export default function CountrySelect() {
+export default function CountrySelect({ setCountry }) {
   return (
     <Autocomplete
       id="country-select-demo"
@@ -13,6 +13,7 @@ export default function CountrySelect() {
       options={countries}
       autoHighlight
       getOptionLabel={(option) => option.label}
+      onChange={(option) => setCountry(option.target.innerText.split(" ")[0])}
       renderOption={(props, option) => (
         <Box
           component="li"
