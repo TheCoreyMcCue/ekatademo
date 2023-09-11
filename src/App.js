@@ -15,7 +15,7 @@ import {
   SignupPage,
   ShoppingCart,
   ApiRequestPage,
-  // ApiResponsePage,
+  ApiResponsePage,
   SignalBreakdownPage,
   PageNotFound,
 } from "./pages";
@@ -26,28 +26,6 @@ const App = () => {
   // const Mobile = useMediaQuery("(min-width:500px)");
 
   return (
-    // <div style={{ height: "100vh", background: "#dcdfe3" }}>
-    //   <Routes>
-    //     <Route
-    //       path="/"
-    //       element={<Landing Desktop={Desktop} Ipad={Ipad} Mobile={Mobile} />}
-    //     />
-    //     <Route path="/signup" element={<Signup />} />
-    //   </Routes>
-    //   <div style={{ display: "flex", justifyContent: "center" }}>
-    //     <img
-    //       src={mainLogo}
-    //       alt="Mastercard Logo"
-    //       style={{
-    //         position: "absolute",
-    //         left: Desktop ? "20rem" : Ipad ? "0%" : "-13rem",
-    //         top: "12rem",
-    //         opacity: "20%",
-    //       }}
-    //     />
-    //   </div>
-    // </div>
-
     <div>
       <Routes>
         <Route path="/" element={<ChooseProduct />} />
@@ -55,7 +33,7 @@ const App = () => {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/request" element={<ApiRequestPage />} />
-        {/* <Route path="/response" element={<ApiResponsePage />} /> */}
+        <Route path="/response" element={<ApiResponsePage />} />
         <Route path="/signals" element={<SignalBreakdownPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

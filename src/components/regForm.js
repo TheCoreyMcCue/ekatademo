@@ -1,14 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FormControl,
-  // InputLabel,
-  // Input,
-  TextField,
-  // FormHelperText,
-} from "@mui/material";
+import { FormControl, TextField } from "@mui/material";
 
-const RegForm = ({ Desktop, Ipad, Mobile }) => {
+const RegForm = ({ Desktop, Ipad }) => {
   return (
     <div style={{ zIndex: 5 }}>
       <form
@@ -16,17 +10,11 @@ const RegForm = ({ Desktop, Ipad, Mobile }) => {
           color: "black",
           display: "flex",
           flexDirection: "column",
-          // justifyContent: "center",
           width: Desktop ? "20vw" : Ipad ? "30vw" : "80vw",
         }}
       >
         <FormControl>
-          <TextField
-            required
-            id="outlined-required"
-            label="Username"
-            // defaultValue="Hello World"
-          />
+          <TextField required id="outlined-required" label="Username" />
         </FormControl>
         <FormControl>
           <TextField
@@ -50,21 +38,6 @@ const RegForm = ({ Desktop, Ipad, Mobile }) => {
       >
         New customer? Signup here
       </Link>
-
-      {/* <a
-      //   target="_blank"
-      //   rel="noreferrer"
-      //   href="https://www.google.com"
-      //   style={{
-      //     display: "flex",
-      //     justifyContent: "center",
-      //     marginTop: "10px",
-      //     position: "relative",
-      //     zIndex: 100000,
-      //   }}
-      // >
-      //   Create an account
-      // </a> */}
     </div>
   );
 };
