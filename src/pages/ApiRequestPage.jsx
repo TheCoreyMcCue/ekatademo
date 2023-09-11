@@ -7,20 +7,45 @@ import shareVideo from "../assets/req.mp4";
 const ChooseProduct = () => {
   const [isButton, setIsButton] = useState(false);
 
-  useEffect(() => {
-    return () => {
-      setTimeout(() => {
-        setIsButton(true);
-      }, "4000");
-    };
-  }, [isButton, setIsButton]);
+  // const delayedRender = () => {
+  //   setTimeout(() => {
+  //     <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0    bg-blackOverlay">
+  //       <Link to="/signals">
+  //         <Button
+  //           style={{ marginLeft: "0.5rem" }}
+  //           variant="outlined"
+  //           color="warning"
+  //         >
+  //           Click to follow the data on its journey
+  //         </Button>
+  //       </Link>
 
-  console.log(
-    localStorage.getItem("name"),
-    localStorage.getItem("email"),
-    localStorage.getItem("phone"),
-    localStorage.getItem("country")
-  );
+  //       <div className="shadow-2xl"></div>
+  //     </div>;
+  //   }, "4000");
+  // };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsButton(true);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [setIsButton]);
+
+  // useEffect(() => {
+  //   return () => {
+  //     setTimeout(() => {
+  //       setIsButton(true);
+  //     }, "4000");
+  //   };
+  // }, [isButton, setIsButton]);
+
+  // console.log(
+  //   localStorage.getItem("name"),
+  //   localStorage.getItem("email"),
+  //   localStorage.getItem("phone"),
+  //   localStorage.getItem("country")
+  // );
 
   return (
     <div className="flex justify-start items-center flex-col h-screen">
