@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+// import { Button } from "@mui/material";
+// import { Link } from "react-router-dom";
 import shareVideo from "../assets/req.mp4";
 
 import RiskModal from "../components/RiskModal";
@@ -18,7 +18,7 @@ const ChooseProduct = () => {
     country: JSON.parse(localStorage.getItem("country")),
   };
 
-  console.log("savedPII", savedPii);
+  console.log("savedPII", isButton);
 
   useEffect(() => {
     const timer = setTimeout(() => {
