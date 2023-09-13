@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
-import { countries } from "../hardData";
+import { countries } from "../data/countryData";
 
 export default function CountrySelect({ setCountry }) {
   return (

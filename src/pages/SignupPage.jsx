@@ -145,11 +145,7 @@ const SignupPage = () => {
 
         <div className="w-full flex items-center justify-center">
           <p className="text-small font-normal text-[#060606]">
-            Don't have an account?{" "}
-            <Link className="underline" to="/signup">
-              Signup for free
-            </Link>
-            <br /> <Link to="/">⬅️ navigate to home page</Link>
+            <Link to="/">⬅️ navigate to home page</Link>
           </p>
         </div>
       </div>

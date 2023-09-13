@@ -3,13 +3,27 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import shareVideo from "../assets/req.mp4";
 
+import RiskModal from "../components/RiskModal";
+
 const ChooseProduct = () => {
   const [isButton, setIsButton] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const savedPii = {
+    name: JSON.parse(localStorage.getItem("name")),
+    email: JSON.parse(localStorage.getItem("email")),
+    phone: JSON.parse(localStorage.getItem("phone")),
+    address1: JSON.parse(localStorage.getItem("address1")),
+    address2: JSON.parse(localStorage.getItem("address2")),
+    country: JSON.parse(localStorage.getItem("country")),
+  };
+
+  console.log("savedPII", savedPii);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsButton(true);
-    }, 4000);
+      setOpen(true);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [setIsButton]);
 
@@ -25,21 +39,18 @@ const ChooseProduct = () => {
           autoPlay
           className="w-full h-full object-cover"
         />
-        {isButton && (
-          <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0    bg-blackOverlay">
-            <Link to="/signals">
-              <Button
-                style={{ marginLeft: "0.5rem" }}
-                variant="outlined"
-                color="warning"
-              >
-                Click to follow the data on its journey
-              </Button>
-            </Link>
 
-            <div className="shadow-2xl"></div>
-          </div>
-        )}
+        <RiskModal
+          open={open}
+          setOpen={setOpen}
+          savedPii={savedPii}
+          // name={savedPii?.name}
+          // email={savedPii?.email}
+          // phone={savedPii?.phone}
+          // address1={savedPii?.address1}
+          // address2={savedPii.address2}
+          // country={savedPii?.country}
+        />
       </div>
     </div>
   );
