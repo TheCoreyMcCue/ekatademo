@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { Button, TextField } from "@mui/material";
+import { Button, createTheme, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import { FcGoogle } from "react-icons/fc";
 import CountrySelect from "../components/CountryList";
+import ResponsiveAppBar from "../components/Navbar";
 
 const SignupPage = () => {
+  const theme = createTheme({
+    palette: {
+      primary: { main: "#060606" },
+      secondary: { main: "#f5f5f5" },
+    },
+  });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,7 +32,8 @@ const SignupPage = () => {
 
   return (
     <section>
-      <div className="w-screen h-100 bg-[#F5F5F5] flex flex-col p-20 justify-between items-center">
+      <ResponsiveAppBar />
+      <div className="w-screen h-100 bg-[#F5F5F5] flex flex-col p-10 justify-between items-center">
         <h1 className="text-xl font-semibold text-[#060606]">
           Challenger Bank
         </h1>
@@ -101,9 +109,9 @@ const SignupPage = () => {
               <TextField
                 required
                 className="w-full text-black py-2 border-b border-black outline-none bg-transparent"
-                label="Address Line 2"
+                label="City"
                 type="text"
-                placeholder="Address Line 2"
+                placeholder="City"
                 onChange={(e) => setAddress2(e.target.value)}
                 color="warning"
                 variant="standard"
@@ -134,6 +142,7 @@ const SignupPage = () => {
                   className="w-full my-2"
                   color="secondary"
                   variant="contained"
+                  onClick={() => assignItems()}
                 >
                   Register with{" "}
                   <FcGoogle style={{ marginLeft: "5px", fontSize: "18px" }} />

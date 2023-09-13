@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 // import { Button } from "@mui/material";
 // import { Link } from "react-router-dom";
@@ -23,6 +24,7 @@ const ChooseProduct = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(true);
+      console.log("here");
     }, 2000);
     return () => clearTimeout(timer);
   }, [setIsButton]);

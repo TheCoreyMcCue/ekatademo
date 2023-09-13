@@ -11,6 +11,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { FcGoogle } from "react-icons/fc";
+import ResponsiveAppBar from "../components/Navbar";
 
 const LoginPage = () => {
   const theme = createTheme({
@@ -22,6 +23,7 @@ const LoginPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <ResponsiveAppBar />
       <section className="w-full h-screen flex items-start">
         <div className="relative w-1/2 h-full flex flex-col">
           <div className="absolute top-[32%] left-[2%] flex flex-col">
@@ -120,7 +122,7 @@ const LoginPage = () => {
               <Link className="underline" to="/signup">
                 Signup for free
               </Link>
-              <br /> <Link to="/">⬅️ navigate to home page</Link>
+              {/* <br /> <Link to="/">⬅️ navigate to home page</Link> */}
             </p>
           </div>
         </div>
