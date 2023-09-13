@@ -7,12 +7,6 @@ import CountrySelect from "../components/CountryList";
 import ResponsiveAppBar from "../components/Navbar";
 
 const SignupPage = () => {
-  const theme = createTheme({
-    palette: {
-      primary: { main: "#060606" },
-      secondary: { main: "#f5f5f5" },
-    },
-  });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
