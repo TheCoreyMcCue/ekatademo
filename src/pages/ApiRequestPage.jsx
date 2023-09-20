@@ -3,11 +3,14 @@ import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import shareVideo from "../assets/req.mp4";
 
+import { lowRiskAoResponse } from "../data/apiData";
 import RiskModal from "../components/RiskModal";
 
 const ChooseProduct = () => {
   const [isButton, setIsButton] = useState(false);
   const [open, setOpen] = useState(false);
+  const [signalOpen, setSignalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const savedPii = {
     name: JSON.parse(localStorage.getItem("name")),
@@ -18,7 +21,7 @@ const ChooseProduct = () => {
     country: JSON.parse(localStorage.getItem("country")),
   };
 
-  console.log("savedPII", isButton);
+  console.log("lowRiskAoResponse", lowRiskAoResponse);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,12 +48,10 @@ const ChooseProduct = () => {
           open={open}
           setOpen={setOpen}
           savedPii={savedPii}
-          // name={savedPii?.name}
-          // email={savedPii?.email}
-          // phone={savedPii?.phone}
-          // address1={savedPii?.address1}
-          // address2={savedPii.address2}
-          // country={savedPii?.country}
+          signalOpen={signalOpen}
+          setSignalOpen={setSignalOpen}
+          setLoading={setLoading}
+          loading={loading}
         />
       </div>
     </div>
