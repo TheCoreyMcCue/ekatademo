@@ -21,7 +21,7 @@ const ChooseProduct = () => {
     country: JSON.parse(localStorage.getItem("country")),
   };
 
-  console.log("lowRiskAoResponse", lowRiskAoResponse);
+  console.log("lowRiskAoResponse", lowRiskAoResponse, isButton);
 
   useEffect(() => {
     const timer = setTimeout(() => {

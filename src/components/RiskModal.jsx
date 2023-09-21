@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import PiiList from "./PiiList";
-import { lowRiskAoResponse } from "../data/apiData";
+// import { lowRiskAoResponse } from "../data/apiData";
 import { CircularProgress } from "@mui/material";
 
 const style = {
